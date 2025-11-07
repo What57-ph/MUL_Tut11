@@ -229,6 +229,55 @@
             transform: scale(1.05) rotate(2deg);
         }
 
+        .animated-gif {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .animated-gif:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .gallery-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(0, 212, 255, 0.2);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 212, 255, 0.3);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-item p {
+            padding: 15px;
+            text-align: center;
+            color: #00d4ff;
+            font-weight: bold;
+        }
+
         .cta-button {
             display: inline-block;
             padding: 15px 40px;
@@ -294,9 +343,19 @@
         </div>
 
         <div class="section">
+            <h2>The Bubble Nebula</h2>
+            <div class="image-container">
+                <img src="https://i.imgur.com/X8J3KQm.jpeg" alt="Beautiful Bubble Nebula in space" class="animated-gif">
+            </div>
+            <p style="text-align: center; color: #b8b8b8; margin-top: 20px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                This stunning cosmic bubble is a stellar nursery where new stars are born. The vibrant blue and orange hues represent different gases heated by powerful stellar winds.
+            </p>
+        </div>
+
+        <div class="section">
             <h2>Celestial Bodies</h2>
             <div class="image-container">
-                <div class="space-image">🪐</div>
+                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjhrMXhzY2R4dXllaWRzdmM5bW83NzVmODJ3MnNmZXBicjN5MWF2aSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/eewkGM4VWyqZzRRumr/giphy.gif" alt="Animated rotating planet" class="animated-gif">
             </div>
             <ul>
                 <li>Mercury - The swift messenger, closest to our Sun</li>
@@ -308,6 +367,36 @@
                 <li>Uranus - The tilted ice giant rotating on its side</li>
                 <li>Neptune - The windiest planet in our solar system</li>
             </ul>
+        </div>
+
+        <div class="section">
+            <h2>Astronaut in Action</h2>
+            <div class="image-container">
+                <img src="astronaut.gif" alt="Animated floating astronaut" class="animated-gif" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="space-image" style="display: none;">👨‍🚀</div>
+            </div>
+            <p style="text-align: center; color: #b8b8b8; margin-top: 20px;">Experience the wonder of floating in zero gravity as astronauts conduct their missions in the vast expanse of space.</p>
+        </div>
+
+        <div class="section">
+            <h2>Space Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="nebula.jpg" alt="Colorful nebula" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="space-image" style="display: none; height: 250px;">🌌</div>
+                    <p>Stunning Nebula</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="galaxy.jpg" alt="Spiral galaxy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="space-image" style="display: none; height: 250px;">🌀</div>
+                    <p>Spiral Galaxy</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="rocket.gif" alt="Animated rocket launch" class="animated-gif" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="space-image" style="display: none; height: 250px;">🚀</div>
+                    <p>Rocket Launch</p>
+                </div>
+            </div>
         </div>
 
         <div class="section">
